@@ -1,0 +1,376 @@
+body{
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    display : table;
+	width: 100%;
+}
+
+.loading{
+ position: fixed;
+ inset: 0;
+ width: 100%;
+ background-color: rgba(250, 250, 250, 0.5); 
+ animation: hidden 0.01s forwards;
+ animation-delay: 2s;
+ z-index: 1;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+@keyframes hidden{
+    0%{
+        transform: scale(1);}
+    100%{
+        transform: scale(0);
+    }
+    
+}
+
+.load{
+    width: 30%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.load_bar{
+    opacity: 1;
+    margin: auto;
+    height: 5rem;
+    width: 2rem;
+    border-radius: 2rem;
+   animation: bars 1000ms infinite ;  
+}
+
+.load1{
+    background: #9356DC;
+    animation-delay: 200ms;
+}
+.load2{
+    background: #FF79DA ;
+    animation-delay: 400ms;
+}
+.load3{
+    background: #99E2D0;
+    animation-delay: 600ms;
+}
+.load4{
+    background: #FF79DA ;
+    animation-delay: 800ms;
+}
+.load5{
+    background: #9356DC;
+    animation-delay: 1000ms;
+}
+
+@keyframes bars {
+    0% {
+        transform: scaleY(0.8);
+        
+    }
+    100% {
+        transform: scaleY(1.0);
+    }
+}
+
+    /************Header***********/
+
+#logo{
+    display: flex;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+/************MAIN***********/
+/************SECTION 1***********/
+
+#location{
+    background-color: #E5E5E5;
+    box-shadow: inset 0 5px 6px -5px #B2B2B2;
+    margin-top: 1rem;
+}
+
+#form{
+    padding-top: 1rem ;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#iconmap{
+    color: #333333;;
+    margin-right: 1rem;
+}
+
+#localisation{
+    font-size: 16px;
+    background-color: #E5E5E5;
+    color:black ;
+    font-weight: 500;
+    border: none;
+}
+
+/************SECTION 2***********/
+
+#info{
+    background-color: #F2F2F2;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
+
+#info h2{
+    margin:auto;
+}
+                 
+.explorer{
+    background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(202,104,219,1) 50%, rgba(255,121,218,1) 100%);
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px  #B2B2B2;
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+    cursor: pointer;
+    border: 0;
+    transform: scale(1);
+    transition-duration: 1000ms;
+}
+
+.explorer:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 5px 5px grey;
+    background: linear-gradient(0deg, rgba(156,93,233,1) 0%, rgba(211,110,230,1) 50%, rgba(255,136,222,1) 100%);
+}
+
+#fonctionnement{
+    margin: 1.25rem;
+}
+
+ol{
+list-style-type: none;
+counter-reset: compteListe;
+}
+
+#fonction{
+    padding: initial;
+    display: flex;
+    justify-content: space-between;
+}
+
+section li:before{
+    content: counter(compteListe) "1";
+    background: #9356DC;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    counter-increment: compteListe 1;
+    content: counter(compteListe) " ";
+    position: relative;
+    right: 1rem;
+}
+    
+.etapes_fonction{
+    background-color: #F2F2F2;
+    margin: 0.6rem;
+    padding-bottom: 1.25rem;
+    padding-top: 1.25rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px  #B2B2B2;
+    cursor: pointer;
+    display: inline flow-root list-item;
+    display: flex;
+    width: 30%;
+    transform: scale(1);
+    transition-duration: 1000ms;
+}
+
+.etapes_fonction:hover {
+    transform: scale(1.05);
+    background-color: #F2E7FE;
+}
+
+.etapes_fonction:hover > div > i {
+    color: #9356DC;
+}
+
+
+.icons{
+    color: #666666;
+    padding: 0.3rem;
+}
+
+
+.text{
+    font-weight: bold;
+    padding-left: 0.5rem;
+}
+
+/************SECTION 3***********/
+
+#restaurant_section{
+    background-color: #F2F2F2;
+    padding: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+#restaurant_section a:visited {
+    color: black;
+}
+
+a{
+    text-decoration:none;
+}
+
+#restaurant_carte{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.carte{
+    background-color: white;
+    box-shadow: 1px 2px 2px #cacaca;
+    cursor: pointer;
+    border-radius: 20px 20px 20px 20px;
+    position: relative;
+}
+
+.restaurant_img{
+    width: 100%;
+    object-fit: cover;
+    height: 15rem;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.new{
+    background-color: #77E4BE;
+    color: #368267;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    display: -webkit-inline-box;
+    margin-top: 1rem;
+    right: 1rem;
+}
+
+.info_carte{
+    margin: 1rem;
+    display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+h4{
+    margin: auto;
+    margin-bottom: 0.2rem;
+    font-size: larger;
+}
+
+.hearticon{
+    height: 2rem;
+    width: 2rem;
+    font-size: 2rem;
+    
+}
+
+.hearticon:hover::before{
+    height: 2rem;
+    width: 2rem;
+    font-size: 2rem;
+    font-weight: 900;
+    background: linear-gradient(0deg, rgba(156,93,233,1) 0%, rgba(211,110,230,1) 50%, rgba(255,136,222,1) 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/************FOOTER***********/
+footer{
+    cursor: pointer;
+    background-color: #333333;
+    color: white;
+    display: table-row;
+    height: 100px;
+}
+
+#footer{
+    padding-left: 2rem;
+}
+ul{
+    padding-inline-start: unset
+}
+
+li{
+    list-style-type: none;
+    padding-top: 0.5rem;
+}
+
+footer h3{
+    font-family: 'Shrikhand';
+}
+
+footer a:visited{
+    color: white;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+/*MEDIA QUERY TABLETTE*/
+@media screen and (max-width: 858px) {
+
+    #logo{
+        width: 75%;
+    }
+
+    #fonction{
+        flex-direction: column;
+    }
+
+    .etapes_fonction{
+        width: auto;
+    }
+
+    #restaurant_carte{
+       grid-template-columns: auto; 
+    }  
+}
+
+/*MEDIA QUERY IPHONE*/
+ @media screen and (max-width: 400px) {
+    
+html, body {
+        height: 100%;
+        margin: 0; padding: 0;
+}
+
+                                    /*Header*/
+
+#logo{
+    display: flex;
+    margin: auto;
+    padding-top: 2rem;
+}
+                                        /*Main*/
+
+section li:before{
+    left: -0.7rem;
+}
+ }
+
+
