@@ -2,7 +2,7 @@ body{
     margin: auto;
     font-family: 'Roboto', sans-serif;
     display : table;
-	width: 100%;
+    width: 100%;
 }
 
 .loading{
@@ -28,7 +28,7 @@ body{
 }
 
 .load{
-    width: 30%;
+   width: 30%;
    display: flex;
    justify-content: space-between;
 }
