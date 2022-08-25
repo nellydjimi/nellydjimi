@@ -333,7 +333,7 @@ footer a{
 }
 
 /*MEDIA QUERY TABLETTE*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
 
     #logo{
         width: 75%;
@@ -353,7 +353,7 @@ footer a{
 }
 
 /*MEDIA QUERY IPHONE*/
- @media screen and (max-width: 376px) {
+ @media screen and (max-width: 768px) {
     
 html, body {
         height: 100%;
